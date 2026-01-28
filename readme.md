@@ -11,7 +11,15 @@
   [![RGPD](https://img.shields.io/badge/RGPD-Compliant-blue?style=for-the-badge&logo=gdpr&logoColor=white)](https://github.com/EthanThePhoenix38/dependabot-secure-flow)
 </div>
 
-# DependabotSecureFlow
+# [DependabotSecureFlow](https://github.com/EthanThePhoenix38/dependabot-secure-flow)
+
+## Table of Contents
+- [Overview](#overview)
+- [Key Features & Philosophy](#key-features--philosophy)
+- [Why This Pattern? (The "Secret Sauce")](#why-this-pattern-the-secret-sauce)
+- [Installation](#installation)
+- [Configuration Options](#configuration-options)
+- [Support This Project](#support-this-project)
 
 **Version**: 1.0.0
 **Author**: EthanThePhoenix38
@@ -168,6 +176,22 @@ jobs:
 | `node-version` | Node versions to use | No | 20 |
 | `test-command` | Command to run for validation | No | `npm install && npm run build` |
 
-## Professional Page
+## Support This Project
 
+If this action helps secure your projects, support the development:
+
+[![GitHub Sponsors](https://img.shields.io/badge/Sponsor_on-GitHub-ea4aaa?style=for-the-badge&logo=github)](https://github.com/sponsors/EthanThePhoenix38)
+[![Patreon](https://img.shields.io/badge/Support_on-Patreon-F96854?style=for-the-badge&logo=patreon)](https://patreon.com/EthanThePhoenix)
+[![PayPal](https://img.shields.io/badge/Support_via-PayPal-00457C?style=for-the-badge&logo=paypal)](https://www.paypal.com/paypalme/VanessaBernier)
+[![Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-F16061?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/EthanThePhoenix)
+
+**Your support helps fund the server and AI development!**
+In exchange, I will add a link to your GitHub profile in the Contributors section.
+
+Or you can:
+- Star this repository
+- Fork it to customize for your needs
+- Report issues to help improve it
+
+## Professional Page
 [https://thephoenixagency.github.io](https://thephoenixagency.github.io)
