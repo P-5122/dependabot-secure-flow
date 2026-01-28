@@ -66,6 +66,10 @@ This workflow implements a rare and advanced DevOps pattern known as a **Self-He
 
 This is a **Workflow Template**. You do not need to install anything with npm to use it. You simply add the configuration file to your repository.
 
+> [!WARNING]
+> This workflow assumes your repository is a **Node.js project** with a valid `package.json` file. The validation step runs `npm install` and `npm run build`. If your project uses a different stack, please adjust the default `test-command` input or your `package.json` scripts accordingly.
+
+
 1.  **Prerequisite**: Create a file named `.github/dependabot.yml` to enable Dependabot scanning:
     ```yaml
     version: 2

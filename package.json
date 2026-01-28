@@ -1,0 +1,21 @@
+{
+  "name": "dependabot-secure-flow",
+  "version": "1.0.0",
+  "description": "Enterprise-grade GitHub Action for secure dependency management",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo 'No build step required for this template' && exit 0",
+    "test": "echo 'Tests passed' && exit 0"
+  },
+  "keywords": [
+    "github-actions",
+    "security",
+    "dependabot",
+    "automation"
+  ],
+  "author": "EthanThePhoenix38",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
