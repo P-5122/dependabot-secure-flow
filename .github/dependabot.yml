@@ -4,5 +4,11 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
-    # Optionnel : définir une limite pour ne pas être inondé
+    target-branch: "main"   # <--- J'ai mis 'main' ici pour votre template
     open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+      - "automated"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
