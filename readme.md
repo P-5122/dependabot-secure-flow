@@ -164,6 +164,25 @@ jobs:
           git fetch origin securite || git switch --create securite
           git config --global user.email '${{ secrets.GIT_AUTHOR_EMAIL }}'
           git config --global user.name 'DependabotSecureFlow'
+          # Merge the PR content to securite
+          git merge origin/${{ github.head_ref }} --no-edit
+          git push origin securite
+          
+          # CLEANUP: Close the original Dependabot PR to reduce noise
+          gh pr close ${{ github.event.pull_request.number }} --delete-branch --comment "✅ Merged into **securite** branch for batch processing."
+        env: { GH_TOKEN: '${{ secrets.GITHUB_TOKEN }}' }
+  # 2. Merge Valid Updates to Sandbox
+  auto-merge-to-securite:
+    needs: check-interdependencies
+    if: ${{ needs.check-interdependencies.outputs.should_merge == 'true' }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+      - run: |
+          git fetch origin securite || git switch --create securite
+          git config --global user.email '${{ secrets.GIT_AUTHOR_EMAIL }}'
+          git config --global user.name 'DependabotSecureFlow'
           git merge origin/${{ github.head_ref }} --no-edit
           git push origin securite
 ```
