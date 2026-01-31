@@ -195,6 +195,13 @@ jobs:
 | `node-version` | Node versions to use | No | 20 |
 | `test-command` | Command to run for validation | No | `npm install && npm run build` |
 
+---
+
+<<< Updated upstream
+**Your support helps fund the server and AI development!**
+In exchange, I will add a link to your GitHub profile in the Contributors section.
+=======
+
 ## Support This Project
 
 If this action helps secure your projects, support the development:
@@ -204,15 +211,20 @@ If this action helps secure your projects, support the development:
 [![PayPal](https://img.shields.io/badge/Support_via-PayPal-00457C?style=for-the-badge&logo=paypal)](https://www.paypal.com/paypalme/VanessaBernier)
 [![Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-F16061?style=for-the-badge&logo=ko-fi)](https://ko-fi.com/EthanThePhoenix)
 
-**Your support helps fund the server and AI development!**
-In exchange, I will add a link to your GitHub profile in the Contributors section.
 
-Or you can:
+[![Support via Patreon](https://img.shields.io/badge/Patreon-Support%20Development-f96854?logo=patreon&logoColor=white)](https://www.patreon.com/EthanThePhoenix)
+
+**Your support helps fund the server and AI development!**
+
+You can also :
 - ⭐ **Star this repository**
 - 🔀 **Fork it** to customize for your needs
 - 🐛 **Report issues** to help improve it- ⭐ **Star this repository**
 - 🔀 **Fork it** to customize for your needs
 - 🐛 **Report issues** to help improve it
 
+---
+
 ## Professional Page
 [https://thephoenixagency.github.io](https://thephoenixagency.github.io)
+
