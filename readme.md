@@ -197,11 +197,6 @@ jobs:
 
 ---
 
-<<< Updated upstream
-**Your support helps fund the server and AI development!**
-In exchange, I will add a link to your GitHub profile in the Contributors section.
-=======
-
 ## Support This Project
 
 If this action helps secure your projects, support the development:
@@ -215,6 +210,7 @@ If this action helps secure your projects, support the development:
 [![Support via Patreon](https://img.shields.io/badge/Patreon-Support%20Development-f96854?logo=patreon&logoColor=white)](https://www.patreon.com/EthanThePhoenix)
 
 **Your support helps fund the server and AI development!**
+In exchange, I will add a link to your GitHub profile in the Contributors section.
 
 You can also :
 - ⭐ **Star this repository**
@@ -228,3 +224,4 @@ You can also :
 ## Professional Page
 [https://thephoenixagency.github.io](https://thephoenixagency.github.io)
 
+---
