@@ -1,0 +1,69 @@
+name: Release Notification
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  notify-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create Release Announcement Issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const release = context.payload.release;
+            
+            const body = `## 🎉 New Release: ${release.tag_name}
+            
+            A new version of **DependabotSecureFlow** has been published!
+            
+            ### 📦 Release Details
+            - **Version**: ${release.tag_name}
+            - **Published**: ${new Date(release.published_at).toLocaleString()}
+            - **Author**: @${release.author.login}
+            
+            ### 📝 Release Notes
+            ${release.body || 'No release notes provided.'}
+            
+            ### 🔗 Links
+            - [View Release](${release.html_url})
+            - [Download Assets](${release.html_url})
+            - [Changelog](https://github.com/${context.repo.owner}/${context.repo.repo}/blob/main/CHANGELOG.md)
+            
+            ### 📢 Update Instructions
+            
+            To use this version in your workflows, update your workflow file:
+            
+            \`\`\`yaml
+            jobs:
+              auto-merge-to-securite:
+                uses: EthanThePhoenix38/dependabot-secure-flow/.github/workflows/dependabot-secure-flow.yml@${release.tag_name}
+                secrets: inherit
+            \`\`\`
+            
+            ---
+            
+            **Automated release notification** • [DependabotSecureFlow](https://github.com/EthanThePhoenix38/dependabot-secure-flow)
+            `;
+            
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `📦 Release ${release.tag_name} Published`,
+              body: body,
+              labels: ['release', 'announcement']
+            });
+
+      - name: Send Summary
+        run: |
+          echo "## 🎉 Release Published" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Version**: ${{ github.event.release.tag_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**URL**: ${{ github.event.release.html_url }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "A notification issue has been created in the repository." >> $GITHUB_STEP_SUMMARY
