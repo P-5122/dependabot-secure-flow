@@ -15,7 +15,7 @@
     "news",
     "aggregator",
     "rss",
-    "iOT",
+    "IoT",
     "Tech"
   ],
   "author": "ThePhoenixAgency",
@@ -33,6 +33,9 @@
     "jsdom": "^27.4.0",
     "rss-parser": "^3.13.0",
     "sanitize-html": "^2.17.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
   },
   "engines": {
     "node": ">=20.0.0"
