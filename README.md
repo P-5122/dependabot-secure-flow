@@ -11,7 +11,7 @@
 
 </div>
 
-# Dependabot Secure Flow
+# [DependabotSecureFlow](https://github.com/EthanThePhoenix38/dependabot-secure-flow)
 
 > Automated dependency management with security-first batch processing
 
