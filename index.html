@@ -139,16 +139,6 @@
 
         mermaid.initialize({ startOnLoad: false, theme: 'default' });
 
-        const renderer = new marked.Renderer();
-        const originalCodeRenderer = renderer.code.bind(renderer);
-        renderer.code = function({ text, lang }) {
-            if (lang === 'mermaid') {
-                return `<pre class="mermaid">${text}</pre>`;
-            }
-            return originalCodeRenderer({ text, lang });
-        };
-        marked.setOptions({ renderer });
-
         async function loadContent() {
             const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${FILE_PATH}`;
 
@@ -175,6 +165,13 @@
                 document.getElementById('loader').style.display = 'none';
                 contentDiv.style.display = 'block';
 
+                contentDiv.querySelectorAll('code.language-mermaid').forEach(function(codeEl) {
+                    const pre = codeEl.parentElement;
+                    const div = document.createElement('pre');
+                    div.className = 'mermaid';
+                    div.textContent = codeEl.textContent;
+                    pre.replaceWith(div);
+                });
                 await mermaid.run({ nodes: contentDiv.querySelectorAll('.mermaid') });
 
             } catch (error) {
