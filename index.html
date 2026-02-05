@@ -112,6 +112,8 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <!-- DOMPurify for Security -->
     <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+    <!-- Mermaid for diagrams -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 
 <body>
@@ -135,8 +137,19 @@
         const FILE_PATH = 'README.md';
         // -------------------------------------------------------
 
+        mermaid.initialize({ startOnLoad: false, theme: 'default' });
+
+        const renderer = new marked.Renderer();
+        const originalCodeRenderer = renderer.code.bind(renderer);
+        renderer.code = function({ text, lang }) {
+            if (lang === 'mermaid') {
+                return `<pre class="mermaid">${text}</pre>`;
+            }
+            return originalCodeRenderer({ text, lang });
+        };
+        marked.setOptions({ renderer });
+
         async function loadContent() {
-            // ... (Le script JS reste identique à la version précédente) ...
             const rawUrl = `https://raw.githubusercontent.com/${REPO_OWNER}/${REPO_NAME}/${BRANCH}/${FILE_PATH}`;
 
             try {
@@ -161,6 +174,8 @@
                 contentDiv.innerHTML = sanitizedHtml;
                 document.getElementById('loader').style.display = 'none';
                 contentDiv.style.display = 'block';
+
+                await mermaid.run({ nodes: contentDiv.querySelectorAll('.mermaid') });
 
             } catch (error) {
                 document.getElementById('loader').innerHTML = `
